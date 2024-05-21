@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Navigation Menu</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        #navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
+            transition: background-color 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        #navbar a {
+            text-decoration: none;
+            color: white;
+            padding: 14px 20px;
+            display: inline-block;
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+
+        #navbar a:hover {
+            color: #ffcc00;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        section {
+            height: 800px; 
+            padding: 60px 20px; 
+            margin-top: 50px; 
+            text-align: center;
+        }
+
+        section h2 {
+            margin-bottom: 20px;
+            font-size: 2em;
+            color: #333;
+        }
+
+        section p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1em;
+            color: #666;
+        }
+
+        section img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        #home {
+            background-color: #ffebcc;
+        }
+
+        #about {
+            background-color: #ccffcc;
+        }
+
+        #services {
+            background-color: #ccffff;
+        }
+
+        #contact {
+            background-color: #ffccff;
+        }
+    </style>
+</head>
+<body>
+
+<div id="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+</div>
+
+<section id="home">
+    <h2>Home</h2>
+    <p>Welcome to our website. Scroll down to learn more about what we offer.</p>
+    <img src="img2.png" alt="Home Image">
+</section>
+
+<section id="about">
+    <h2>About</h2>
+    <p>We are a company dedicated to providing the best services to our customers. Our team is composed of highly skilled professionals.</p>
+    <img src="img1.png" alt="About Image">
+</section>
+
+<section id="services">
+    <h2>Services</h2>
+    <p>Our range of services includes web development, digital marketing, and IT consulting. We tailor our solutions to meet the unique needs of each client.</p>
+    <img src="https://images.unsplash.com/photo-1591696205602-2a89665b3a11?fit=crop&w=800&q=80" alt="Services Image">
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Get in touch with us through our contact page. We look forward to hearing from you.</p>
+    <img src="https://images.unsplash.com/photo-1591147813702-7dba20e2f96e?fit=crop&w=800&q=80" alt="Contact Image">
+</section>
+
+<script>
+    window.addEventListener('scroll', function () {
+        var navbar = document.getElementById('navbar');
+        if (window.scrollY > 50) {
+            navbar.style.backgroundColor = '#444'; // Darker background color on scroll
+        } else {
+            navbar.style.backgroundColor = '#333'; // Original background color
+        }
+    });
+</script>
+
+</body>
+</html>
